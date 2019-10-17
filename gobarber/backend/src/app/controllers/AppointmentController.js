@@ -31,7 +31,7 @@ class AppointmentController {
       date,
     });
 
-    res.send(201).json(appointment);
+    return res.send(201).json(appointment);
   }
 }
 
