@@ -83,7 +83,7 @@ class AppointmentController {
       date: hourStart,
     });
 
-    return res.send(201).json(appointment);
+    return res.status(201).json(appointment);
   }
 }
 
