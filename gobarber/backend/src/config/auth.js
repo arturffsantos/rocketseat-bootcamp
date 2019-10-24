@@ -1,4 +1,4 @@
 export default {
-  secret: process.env.MD5_HASH,
+  secret: process.env.APP_SECRET,
   expiresIn: '7d',
 };
