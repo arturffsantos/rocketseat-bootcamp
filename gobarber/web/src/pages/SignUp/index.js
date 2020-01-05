@@ -6,11 +6,13 @@ import * as Yup from 'yup';
 import logo from '~/assets/logo.svg';
 
 const schema = Yup.object().shape({
-  name: Yup.string().required('Nome é obrigatório');
+  name: Yup.string().required('Nome é obrigatório'),
   email: Yup.string()
     .email('Insira um email válido')
     .required('O email é obrigatório'),
-  password: Yup.string().min(6, 'Mínimo de 6 caracteres').required('Senha é obrigatória'),
+  password: Yup.string()
+    .min(6, 'Mínimo de 6 caracteres')
+    .required('Senha é obrigatória'),
 });
 
 export default function SignUp() {
