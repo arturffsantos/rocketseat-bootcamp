@@ -12,7 +12,13 @@ class ScheduleController {
     if (!checkUserProvider) {
       return res.status(401).json({ error: 'User is not a provider' });
     }
-    const { date = new Date().toLocaleDateString() } = req.query;
+
+    const { date } = req.query;
+
+    if (!date) {
+      return res.status(400).json({ error: 'date is required' });
+    }
+
     const parsedDate = parseISO(date);
 
     const appointments = await Appointment.findAll({
