@@ -52,7 +52,6 @@ export default function Dashboard() {
           }),
         };
       });
-      console.tron.log(data);
       setSchedule(data);
     }
 
