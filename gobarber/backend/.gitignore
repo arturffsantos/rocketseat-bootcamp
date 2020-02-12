@@ -2,3 +2,5 @@
 .env
 /.vscode
 /tmp
+/__tests__/coverage
+/__tests__/database.sqlite
